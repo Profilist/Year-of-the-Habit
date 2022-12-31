@@ -75,3 +75,17 @@
   /* background-color: #F2888B; */
   border-radius: 4px;
 }
+
+.main .progress {
+  margin: 50px;
+  padding: 20px 100px;
+  color: #fff;
+  background-color: #F2888B;
+  border-width: 10px;
+  border-color: #A3262A;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 150%;
+}

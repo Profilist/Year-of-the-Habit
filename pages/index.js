@@ -59,7 +59,12 @@ export default function Home() {
 
         <Steps display={display} />
 
-
+        <button
+          className={styles.progress}
+          style={display == "" ? { display: "none" } : { display: "flex" }}
+        >
+          Track your Progress
+        </button>
       </main>
     </div>
   );
