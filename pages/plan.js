@@ -9,7 +9,7 @@ export default function Plan(props) {
     <div>
       <button
         type="button"
-        className={styles.collapsible}
+        className={collapse ? styles.collapsed: styles.collapsible}
         onClick={() => setCollapse(!collapse)}
       >
         {props.step}
