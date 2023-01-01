@@ -25,10 +25,10 @@
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
-  background-image: url(../public/backgroundBig.svg);
+  background-image: url(../public/backgroundResized.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200vh;
+  height: 220vh;
 }
 .main .icon {
   width: 100px;
@@ -77,8 +77,8 @@
 }
 
 .main .progressButton {
-  margin: 50px;
-  padding: 20px 100px;
+  margin: 20px;
+  padding: 20px 80px;
   color: #fff;
   background-color: #F2888B;
   border-width: 10px;
@@ -92,19 +92,25 @@
 
 .main ul {
   list-style-type: none;
-  padding: 0;
-  /* width: 30%; */
-  margin: 0 auto;
+  padding: 2%;
+  width: 70%;
+  margin: 50px;
   background-color: #FFD84B;
+  display: inline-block;
 }
 
-.main .list li {
-  margin-bottom: 0.5rem;
+.main li {
+  margin: 10px;
+}
+
+.main li:last-child {
+  margin-top: 20px; 
 }
 
 .main .item {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .main .item label {
@@ -114,4 +120,8 @@
 
 .main .progressBarContainer {
   align-self: inherit;
+}
+
+.main .total {
+
 }

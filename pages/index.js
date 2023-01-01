@@ -1,15 +1,18 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./index.module.css";
 import Steps from "./steps";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import ProgressBar from 'react-bootstrap/ProgressBar';
 import ProgBar from "./progressBarComponent";
+import illustration from "../public/illustration.svg";
+import landingStyles from "./landing.module.css";
+import { Link } from "react-scroll";
 
 export default function Home() {
   const [resolutionInput, setResolutionInput] = useState("");
   const [result, setResult] = useState();
   const [list, setList] = useState([""]);
+  const [click, setClick] = useState(false);
+  const scrollRef = useRef(null);
 
   const [checkedState, setCheckedState] = useState(
     new Array(list.length).fill(false)
@@ -91,17 +94,55 @@ export default function Home() {
     setTotal(totalNum);
   };
 
+  function changePage() {
+    setClick(true);
+    // scrollRef.current.scrollIntoView();
+  }
+
   let display = result == null ? "" : result;
-  console.log(list.toString() == [""].toString())
   return (
     <div>
       <Head>
         <title>Year of the Habit</title>
         <link rel="icon" href="/yoth.png" />
       </Head>
-      <main className={styles.main}>
+      <div 
+      // style={click ? { display: "none", transitionDelay: "2s" } : { display: "flex" }} 
+      className={landingStyles.frame}>
+        <img
+          className={landingStyles.illustration}
+          src={illustration.src}
+          alt="illustration"
+        />
+        <div className={landingStyles.text}>
+          <div className={landingStyles.header}>THIS IS</div>
+          <div className={landingStyles.header}>YOUR YEAR</div>
+          <div className={landingStyles.paragraph}>
+            As the new year begins, it's time to reflect on the past and set our
+            sights on the future.
+          </div>
+          <div className={landingStyles.paragraph}>
+            This is your year to make your dreams a reality...{" "}
+          </div>
+          <Link
+            activeClass="active"
+            to="form"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={700}
+            className={landingStyles.button} onClick={changePage}>Take Your
+            First Step
+          </Link>
+        </div>
+      </div>
+      <main
+        ref={scrollRef}
+        style={click ? { display: "flex" } : { display: "none" }}
+        className={styles.main}
+      >
         <img src="/yoth.png" className={styles.icon} />
-        <h3>What do you want to achieve in 2023?</h3>
+        <h3 id="form">What do you want to achieve in 2023?</h3>
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -128,7 +169,7 @@ export default function Home() {
           style={
             list.toString() == [""].toString()
               ? { display: "none" }
-              : { display: "flex" }
+              : { display: "inline-block" }
           }
         >
           {list.map((value, index) => {
@@ -152,12 +193,16 @@ export default function Home() {
           })}
           <li>
             <div className="item">
-              <div>Total:</div>
+              <div className="total">Total:</div>
               <div>{total}</div>
             </div>
           </li>
         </ul>
-        {list.toString() == [""].toString() ? <div/> : <ProgBar total={total} num={list.length} />}
+        {list.toString() == [""].toString() ? (
+          <div />
+        ) : (
+          <ProgBar total={total} num={list.length} />
+        )}
       </main>
     </div>
   );

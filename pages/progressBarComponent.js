@@ -5,7 +5,7 @@ export default function progressBarComponent(props) {
         border: "1px solid black", 
         height: "3rem", 
         alignSelf: "normal",
-        margin: "10%",
+        margin: "3%",
         borderRadius: "20px", 
         backgroundColor: "#CC232A"}}>
 
