@@ -18,8 +18,9 @@ export default function progressBarComponent(props) {
           alignItems: "normal",
           display: "flex",
           borderRadius: "20px",
+          textAlign: "center",
         }}>
-
+          {props.total/props.num*100 == 100 ? "CONGRATS!" : ""}
       </div>
     </div>
   );
