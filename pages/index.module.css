@@ -25,13 +25,13 @@
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
-  background-image: url(../public/background.svg);
+  background-image: url(../public/backgroundBig.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 120vh;
+  height: 200vh;
 }
 .main .icon {
-  width: 34px;
+  width: 100px;
 }
 .main h3 {
   font-size: 32px;
@@ -76,7 +76,7 @@
   border-radius: 4px;
 }
 
-.main .progress {
+.main .progressButton {
   margin: 50px;
   padding: 20px 100px;
   color: #fff;
@@ -88,4 +88,30 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 150%;
+}
+
+.main ul {
+  list-style-type: none;
+  padding: 0;
+  /* width: 30%; */
+  margin: 0 auto;
+  background-color: #FFD84B;
+}
+
+.main .list li {
+  margin-bottom: 0.5rem;
+}
+
+.main .item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .item label {
+  vertical-align: text-bottom;
+  margin-left: 0.2rem;
+}
+
+.main .progressBarContainer {
+  align-self: inherit;
 }
