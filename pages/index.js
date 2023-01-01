@@ -30,8 +30,11 @@ export default function Home() {
         body: JSON.stringify({ goal: resolutionInput }),
       });
 
+      setTotal(0);
+      setCheckedState(new Array(list.length).fill(false));
+      
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       if (response.status !== 200) {
         throw (
           data.error ||
@@ -58,7 +61,7 @@ export default function Home() {
       });
 
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       if (response.status !== 200) {
         throw (
           data.error ||
