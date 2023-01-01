@@ -31,14 +31,14 @@
   height: 220vh;
 }
 .main .icon {
-  width: 100px;
+  width: 150px;
 }
 .main h3 {
-  font-size: 32px;
+  font-size: 52px;
   line-height: 40px;
   font-weight: bold;
   color: #FFFFFF;
-  margin: 16px 0 40px;
+  margin: 50px 0 70px;
 }
 .main form {
   display: flex;
@@ -49,7 +49,7 @@
   padding: 12px 16px;
   border: none;
   border-radius: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 35px;
   outline-color: #A3262A;
   background-color: #FFD84B;
   color: #000000;
@@ -97,6 +97,7 @@
   margin: 50px;
   background-color: #FFD84B;
   display: inline-block;
+  border-radius: 8px;
 }
 
 .main li {

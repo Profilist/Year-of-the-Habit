@@ -142,7 +142,8 @@ export default function Home() {
         className={styles.main}
       >
         <img src="/yoth.png" className={styles.icon} />
-        <h3 id="form">What do you want to achieve in 2023?</h3>
+        <div id="form"/>
+        <h3>What do you want to achieve in 2023?</h3>
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -151,7 +152,7 @@ export default function Home() {
             value={resolutionInput}
             onChange={(e) => setResolutionInput(e.target.value)}
           />
-          <input type="submit" value="Generate plan" />
+          <input type="submit" value="Generate Plan" />
         </form>
 
         <Steps display={display} />

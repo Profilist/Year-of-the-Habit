@@ -24,7 +24,7 @@
 }
 
 .header {
-    font-size: clamp(2em, 4vw, 3em);
+    font-size: clamp(3em, 5vw, 4em);
     font-weight: 700;
 }
 
@@ -37,17 +37,18 @@
     margin-top: 3vh;
     border: none;
     display: inline-block;
-    padding-top: 2vw;
+    padding-top: 1vw;
     padding-left: 1vw;
     padding-right: 1vw;
     width: 20vw;
-    height: 10vh;
+    height: 5.5vh;
     letter-spacing: 0.05em;
     font-weight: 700;
     text-align: center;
     background-color: #FFD84B;
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 30px;
+    border-radius: 10px;
 }
 
 .button:hover {

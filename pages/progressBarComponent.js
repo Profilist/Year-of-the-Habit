@@ -13,7 +13,7 @@ export default function progressBarComponent(props) {
         className="progress-bar"
         style={{
           width: `${props.total/props.num*100}%`,
-          backgroundColor: "#F2888B",
+          backgroundColor: "#FFD84B",
           height: "100%",
           alignItems: "normal",
           display: "flex",
